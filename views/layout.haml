@@ -3,52 +3,28 @@
   %head
     %title Sinatra + Twitter Bootstrap
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
-    %link{href: "/vendor/bootstrap/css/bootstrap.min.css", rel: "stylesheet"}/
-    %link{href: "/vendor/bootstrap/css/carousel.css", rel: "stylesheet"}/
+    %link{href: "/vendor/bootstrap/css/bootstrap.css", rel: "stylesheet"}/
+    %link{href: "/vendor/bootstrap/css/justified-nav.css", rel: "stylesheet"}/
     /[if lt IE 9]
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
   %body
-    #myCarousel.carousel.slide{"data-ride" => "carousel"}
-      / Indicators
-      %ol.carousel-indicators
-        %li{"data-slide-to" => "0", "data-target" => "#myCarousel"}
-        %li.active{"data-slide-to" => "1", "data-target" => "#myCarousel"}
-        %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
-      .carousel-inner
-        .item
-          %img{"data-src" => "holder.js/900x500/auto/#777:#7a7a7a/text:First slide", src: "images/picture_of_us.png" }/
-          .container
-            .carousel-caption
-              %h1 Lauren & Joe's Wedding
-              %p
-                September 27th, 2014
-        .item.active
-          %img{"data-src" => "holder.js/900x500/auto/#666:#6a6a6a/text:Second slide"}/
-          .container
-            .carousel-caption
-              %h1 Our Lady of the Visitation
-              %p 
-                Paramus, NJ
-              %p
-                3:00 PM
-        .item
-          %img{"data-src" => "holder.js/900x500/auto/#555:#5a5a5a/text:Third slide", src: "images/the_fiesta.png"}/
-          .container
-            .carousel-caption
-            .carousel-caption
-              %h1 The Fiesta
-              %p 
-                Woodridge, NJ
-              %p
-                6:00 PM
-      %a.left.carousel-control{"data-slide" => "prev", href: "#myCarousel"}
-        %span.glyphicon.glyphicon-chevron-left
-      %a.right.carousel-control{"data-slide" => "next", href: "#myCarousel"}
-        %span.glyphicon.glyphicon-chevron-right
+    .container
+      .masthead
+        %ul.nav.nav-justified
+          %li
+            %a{href: "/"} Home
+          %li.event_info_nav
+            %a{href: "/event_info"} Event Info
+          %li.registry_nav
+            %a{href: "/registry"} Registry
+          %li.images_nav
+            %a{href: "/images"} Images
+          %li.contact_nav
+            %a{href: "/contact"} Contact
+    %script{src: "/vendor/jquery-1.9.1.min.js"}
+    %script{src: "/vendor/bootstrap/js/bootstrap.min.js"}
     %div
       - if @error then
         .alert.alert-error= @error
       = yield
-    %script{src: "/vendor/jquery-1.9.1.min.js"}
-    %script{src: "/vendor/bootstrap/js/bootstrap.min.js"}
