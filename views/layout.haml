@@ -10,21 +10,24 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
   %body
     .container
-      .masthead
-        %ul.nav.nav-justified
-          %li
-            %a{href: "/"} Home
-          %li.event_info_nav
-            %a{href: "/event_info"} Event Info
-          %li.registry_nav
-            %a{href: "/registry"} Registry
-          %li.images_nav
-            %a{href: "/images"} Images
-          %li.contact_nav
-            %a{href: "/contact"} Contact
+      .jumbotron
+        %h1.text-center
+          Lauren & Joe's Wedding
+        %a{href: 'http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=13781121&pwsurl='} 
+          %img.img-circle{"alt" => "140x140", "data-src" => "holder.js/140x140", style: "width: 300px;height: 300px;", src: 'images/140.png'}
+        %p.lead
+          All the information on our wedding can be found here. We're excited to celebrate and share our day with you.
+      %ul.nav.nav-justified.navbar-static-top
+        %li
+          %a{href: "/"} Home
+        %li.event_info_nav
+          %a{href: "/event_info"} Event Info
+        %li.registry_nav
+          %a{href: "/registry"} Registry
+        %li.images_nav
+          %a{href: "/images"} Images
+        %li.contact_nav
+          %a{href: "/contact"} Contact
     %script{src: "/vendor/jquery-1.9.1.min.js"}
     %script{src: "/vendor/bootstrap/js/bootstrap.min.js"}
-    %div
-      - if @error then
-        .alert.alert-error= @error
-      = yield
+    = yield
