@@ -1,4 +1,18 @@
 :javascript
   $('.event_info_nav').addClass( 'active' );
-.container
+.container.marketing
   %h1 Event Info
+  .row
+    .col-lg-6
+      %h2 Ceremony:
+      %img.img-circle{"alt" => "140x140", "data-src" => "holder.js/140x140", style: "width: 300px;height: 300px;", src: 'images/140.png'}
+      %p
+        .location Location:
+        .date Date:
+    .col-lg-6
+      %h2 Reception:
+      %img.img-circle{"alt" => "140x140", "data-src" => "holder.js/140x140", style: "width: 300px;height: 300px;", src: 'images/140.png'}
+      %p
+        .location Location:
+        .date Date:
+
