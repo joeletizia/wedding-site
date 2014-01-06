@@ -17,17 +17,17 @@
           %img.img-circle{"alt" => "140x140", "data-src" => "holder.js/140x140", style: "width: 300px;height: 300px;", src: 'images/140.png'}
         %p.lead
           All the information on our wedding can be found here. We're excited to celebrate and share our day with you.
-      %ul.nav.nav-justified.navbar-static-top
+      %ul.nav.nav-justified.navbar-static-top#nav
         %li
           %a{href: "/"} Home
         %li.event_info_nav
-          %a{href: "/event_info"} Event Info
+          %a{href: "/event_info#nav"} Event Info
         %li.registry_nav
-          %a{href: "/registry"} Registry
+          %a{href: "/registry#nav"} Registry
         %li.images_nav
-          %a{href: "/images"} Images
+          %a{href: "/images#nav"} Images
         %li.contact_nav
-          %a{href: "/contact"} Contact
+          %a{href: "/contact#nav"} Contact
     %script{src: "/vendor/jquery-1.9.1.min.js"}
     %script{src: "/vendor/bootstrap/js/bootstrap.min.js"}
     = yield
