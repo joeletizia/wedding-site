@@ -5,16 +5,49 @@
   .row
     .col-lg-6
       %h2 Ceremony:
-      %img.img-circle{"alt" => "140x140", "data-src" => "holder.js/140x140", style: "width: 300px;height: 300px;", src: 'images/140.png'}
+      %a{href: '#'} 
+        %img.img-circle{"alt" => "140x140", "data-src" => "holder.js/140x140", style: "width: 300px;height: 300px;", src: 'images/olv.png'}
       %p
         .name Our Lady of the Visitation
-        .location 123 Main St, Paramus NJ
+        %a{href: 'https://www.google.com/maps/preview#!data=!1m4!1m3!1d3057!2d-74.062711!3d40.9345488!4m12!2m11!1m10!1s0x0%3A0x1f277712b4eb7c60!3m8!1m3!1d3000292!2d-75.7700405!3d42.746632!3m2!1i1024!2i768!4f13.1'} 
+          .location 234 N Farview Ave Paramus, NJ
         .date September 27th 2014 3:00 PM
     .col-lg-6
       %h2 Reception:
-      %img.img-circle{"alt" => "140x140", "data-src" => "holder.js/140x140", style: "width: 300px;height: 300px;", src: "images/the_fiesta.png"}
+      %a{href: 'http://www.fiestabanquets.com'} 
+        %img.img-circle{"alt" => "140x140", "data-src" => "holder.js/140x140", style: "width: 300px;height: 300px;", src: "images/the_fiesta.png"}
       %p
         .name The Fiesta
-        .location 123 Main St, Woodridge NJ
+        %a{href: 'https://www.google.com/maps/preview#!data=!1m4!1m3!1d2888!2d-74.0780253!3d40.8461972!4m12!2m11!1m10!1s0x0%3A0x8f68a1ddb5eb451b!3m8!1m3!1d3000292!2d-75.7700405!3d42.746632!3m2!1i1024!2i768!4f13.1'} 
+          .location 255 New Jersey 17, Woodridge NJ
         .date September 27th 2014 6:00 PM
+        .note
+          %a{href: '#', data: {toggle: 'modal', target: '#direction-modal'}}
+            Public transit options
+
+.modal.fade#direction-modal
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4.modal-title Via NJ Transit
+      .modal-body
+        %p The Fiesta is located very close to the Woodridge train station. It is accessible via the Pascack Valley line on NJ Transit.
+        .directions
+          %a{href: '#'}
+            %h4 From Manhattan
+          %ul
+            %li Go to Penn Station. 5:11 is the latest train to get you to Woodridge before 6PM.
+            %li Take any train that is listed SEC (Secaucus).
+            %li Get off at Secaucus.
+            %li Take the Pascack Valley line (Purple line) to Woodridge.
+            %li Call a local cab and ask to be picked up.
+          %a{href: '#'}
+            %h4 From North Jersey heading south
+          %ul
+            %li Go to a train on the Pascack Valley line (Hackensack, Riveredge, Oradell, Montvale, Westwood, Hillsdale).
+            %li Get off at Woodridge.
+            %li Call a local cab and ask to be picked up.
+      .modal-footer
+        %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} OK
 
