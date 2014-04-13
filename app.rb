@@ -6,7 +6,7 @@ get '/' do
   haml :index
 end
 
-get '/event_info' do
+get '/event-info' do
   haml :event_info
 end
 
@@ -16,6 +16,10 @@ end
 
 get '/contact' do
   haml :contact
+end
+
+get '/day-of-information' do
+  haml :day_of_information
 end
 
 get '/registry' do
