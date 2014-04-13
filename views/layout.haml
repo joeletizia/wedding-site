@@ -20,10 +20,11 @@
       %ul.nav.nav-justified.navbar-static-top#nav
         %li
           %a{href: "/"} Home
-        %li.event_info_nav
-          %a{href: "/event_info#nav"} Event Info
-        %li.registry_nav
-          %a{href: "/registry#nav"} Registry
+        %li.event-info-nav
+          %a{href: "#content", data: { presents: 'update-content', target: "event-info"}} Event Info
+        %li.registry-nav
+          %a{href: "#content", data: { presents: 'update-content', target: "registry"}} Registry
     %script{src: "/vendor/jquery-1.9.1.min.js"}
     %script{src: "/vendor/bootstrap/js/bootstrap.min.js"}
-    = yield
+    %script{src: "/javascript/data_presents.js"}
+    #content

@@ -6,8 +6,8 @@ get '/' do
   haml :index
 end
 
-get '/event_info' do
-  haml :event_info
+get '/event-info' do
+  haml :event_info, layout: false
 end
 
 get '/images' do
@@ -19,5 +19,5 @@ get '/contact' do
 end
 
 get '/registry' do
-  haml :registry
+  haml :registry, layout: false
 end
