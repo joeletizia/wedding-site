@@ -1,5 +1,6 @@
 :javascript
   $('.event-info-nav').addClass( 'active' );
+
 .container.marketing
   %h1 Event Info
   .row
@@ -32,8 +33,12 @@
         .name Holiday Inn of Hasbrouck Heights
         %a{href: 'https://www.google.com/maps/place/Holiday+Inn+Hasbrouck+Heights-Meadowlands/@40.860294,-74.067421,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x4f85c30bf4ef2394'} 
           .location 283 New Jersey 17, Hasbrouck Heights NJ
+        .note The hotel recommend's using 474 Ottawa Avenue, Hasbrouck Heights NJ 07604 in your GPS.
         .note
-          Click the picture above, or use the code 'LJW' for a discount.
+          Click the picture above, or use the code 'LJW' for a discount. Please reserve by 
+          %strong
+            July 25 2014
+
 
 .modal.fade#direction-modal
   .modal-dialog
@@ -51,7 +56,7 @@
             %li Take any train that is listed SEC (Secaucus).
             %li Get off at Secaucus.
             %li Take the Pascack Valley line (Purple line) to Woodridge.
-            %li Call a local cab and ask to be picked up.
+            %li Call a local cab and ask to be picked up, or walk 1/4 mile.
           %a{href: '#'}
             %h4 From North Jersey heading south
           %ul
