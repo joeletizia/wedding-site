@@ -33,11 +33,7 @@
         .name Holiday Inn of Hasbrouck Heights
         %a{href: 'https://www.google.com/maps/place/Holiday+Inn+Hasbrouck+Heights-Meadowlands/@40.860294,-74.067421,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x4f85c30bf4ef2394'} 
           .location 283 New Jersey 17, Hasbrouck Heights NJ
-        .note The hotel recommend's using 474 Ottawa Avenue, Hasbrouck Heights NJ 07604 in your GPS.
-        .note
-          Click the picture above, or use the code 'LJW' for a discount. Please reserve by 
-          %strong
-            July 25 2014
+        %a{href: '#', data: { toggle: 'modal', target: '#hotel_modal'}} Information
 
 
 .modal.fade#direction-modal
@@ -63,6 +59,25 @@
             %li Go to a train on the Pascack Valley line (Hackensack, Riveredge, Oradell, Montvale, Westwood, Hillsdale).
             %li Get off at Woodridge.
             %li Call a local cab and ask to be picked up.
+      .modal-footer
+        %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} OK
+
+.modal.fade#hotel_modal
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4.modal-title Hotel Information
+      .modal-body
+        %ul
+          %li
+            A shuttle is available from the hotel to the venue prior to the reception, and back for the night.
+          %li
+            The hotel recommend's using 474 Ottawa Avenue, Hasbrouck Heights NJ 07604 in your GPS.
+          %li
+            When making a reservation, use the code 'LJW' for a discount. Please reserve by 
+            %strong
+              July 25 2014
       .modal-footer
         %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} OK
 
